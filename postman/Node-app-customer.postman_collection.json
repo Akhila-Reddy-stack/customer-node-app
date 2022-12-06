@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "6ed4eae5-487f-44d7-aa27-98e9c6f78330",
+		"name": "Node-app-customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17098318"
+	},
+	"item": [
+		{
+			"name": "Start app",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/customers?first_name=Aman&last_name=Gupta&city=Ahmedabad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Aman"
+						},
+						{
+							"key": "last_name",
+							"value": "Gupta"
+						},
+						{
+							"key": "city",
+							"value": "Ahmedabad"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "perPage",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Customer List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "Aman",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Gupta",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Ahmedabad",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "perPage",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "641"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"281-hnZ0NLoiODDN7Z+nDfwy68e+alw\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Dec 2022 07:53:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_token\": null,\n    \"code\": 200,\n    \"message\": \"Customers found.\",\n    \"error\": \"\",\n    \"result\": {\n        \"count\": 6,\n        \"rows\": [\n            {\n                \"id\": 1,\n                \"first_name\": \"Aman\",\n                \"last_name\": \"Gupta\",\n                \"city\": \"Ahmedabad\",\n                \"company\": \"SublimeDataSystems\"\n            },\n            {\n                \"id\": 2,\n                \"first_name\": \"Alik\",\n                \"last_name\": \"Jain\",\n                \"city\": \"Delhi\",\n                \"company\": \"XYZ\"\n            },\n            {\n                \"id\": 3,\n                \"first_name\": \"John\",\n                \"last_name\": \"Smith\",\n                \"city\": \"Delhi\",\n                \"company\": \"XYZ\"\n            },\n            {\n                \"id\": 4,\n                \"first_name\": \"Arman\",\n                \"last_name\": \"Jain\",\n                \"city\": \"Pune\",\n                \"company\": \"ABX\"\n            },\n            {\n                \"id\": 5,\n                \"first_name\": \"Hritwik\",\n                \"last_name\": \"Das\",\n                \"city\": \"Ahmedabad\",\n                \"company\": \"SublimeDataSystems\"\n            },\n            {\n                \"id\": 6,\n                \"first_name\": \"Arvinder\",\n                \"last_name\": \"Koi\",\n                \"city\": \"Ahmedabad\",\n                \"company\": \"SublimeDataSystems\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Customer by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/customers/list/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"list",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Customer by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customers/list/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customers",
+								"list",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a7-FQZsPXpCw7sFKhZnIqdyak2FToo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Dec 2022 07:54:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_token\": null,\n    \"code\": 200,\n    \"message\": \"Customer data is found\",\n    \"error\": \"\",\n    \"result\": {\n        \"id\": 2,\n        \"first_name\": \"Alik\",\n        \"last_name\": \"Jain\",\n        \"city\": \"Delhi\",\n        \"company\": \"XYZ\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get unique list of cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/customers/uniquecities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"uniquecities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get unique list of cities",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/customers/uniquecities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customers",
+								"uniquecities"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8f-XG/R0P9oScKroYWesMNCm1q+6Tg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Dec 2022 07:54:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_token\": null,\n    \"code\": 200,\n    \"message\": \"Unique cities with customer count is found\",\n    \"error\": \"\",\n    \"result\": {\n        \"Ahmedabad\": 3,\n        \"Delhi\": 2,\n        \"Pune\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add customer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"Joi\",\r\n    \"lastname\":\"Faique\",\r\n    \"city\":\"Pune\",\r\n    \"company\":\"ABX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/customers/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"customers",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-ILpIgffTNrv0rcx1lcwn5aITkI0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Dec 2022 07:54:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request_token\": null,\n    \"code\": 200,\n    \"message\": \"Customer added successfully.\",\n    \"error\": \"\",\n    \"result\": [\n        {\n            \"id\": 7\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
